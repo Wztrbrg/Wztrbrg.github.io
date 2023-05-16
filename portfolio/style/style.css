@@ -18,6 +18,7 @@ Accent: #ae52f9
 body, html{
     width: 100%;
     position: relative;
+    background: linear-gradient(to bottom, #212121, #313131);
     background-color: #212121;
 }
 
@@ -223,10 +224,11 @@ a{
 
 .hero-section{
     width: 100%;
-    min-height: 100vh;
+    min-height: 74vh;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
+    margin-bottom: 1em;
 }  
 
 .left-container{
@@ -265,7 +267,8 @@ a{
     text-shadow: 0px 2px 2px rgba(4, 4, 4, 0.677);
 }
 
-.left-para{
+.left-para,
+.about-para{
     font-size: 18px;
     line-height: 22px;
     margin-bottom: 24px;
@@ -469,7 +472,7 @@ a{
         width: 60%;
     }
     .hero-section{
-        height: 100vh;
+        height: 90vh;
         width: 100%;
         max-width: 728px;
         margin: 0 auto;
@@ -514,15 +517,14 @@ a{
         /* border: 2px solid white; */
     }
 
-    .work-section{
+    .work-section,
+    .about-section{
         max-width: 586px;
         margin: 0 auto;
-        /* border: 2px solid white; */
     }
 
     .work-content{
         width: 100%;
-        /* border: 2px solid white */
     }
 
     .work-heading{
@@ -532,9 +534,8 @@ a{
 
     .work-card{
         flex-direction: row;
-        background-color: #212121;
+        background-color: rgba(0, 0, 0, 0);
         box-shadow: none;
-        /* border: 2px solid white */
     }
 
     .work-card img{
