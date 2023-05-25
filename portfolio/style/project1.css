@@ -146,6 +146,7 @@ a{
 .main-section{
     width: 90%;
     margin: 0 auto;
+    margin-bottom: 24px;
 }
 
 
@@ -176,8 +177,7 @@ a{
 
 .main-para a{
     text-decoration: none;
-    font-weight: 600;
-    margin-bottom: 24px;
+    font-weight: 700;
 }
 
 @media screen and (min-width: 600px){
