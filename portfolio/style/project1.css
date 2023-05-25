@@ -177,6 +177,7 @@ a{
 .main-para a{
     text-decoration: none;
     font-weight: 600;
+    margin-bottom: 24px;
 }
 
 @media screen and (min-width: 600px){
