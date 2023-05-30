@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Libre+Baskerville:wght@400;700&display=swap");
+@import "./partials/variables";
+@import "./partials/topNav";
+@import "./partials/loginModal";
+@import "./partials/heroSection";
+
+@media (max-width: 1240px) {
+  .top-nav {
+    padding: 0 2%;
+
+    .nav-link-container {
+      .nav-list {
+        a {
+          padding: 28px 8px;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .nav-login-container {
+      flex-wrap: wrap-reverse;
+      .nav-login-btn {
+        font-size: 12px;
+        padding: 8px;
+      }
+
+      .login-message-container {
+        .user-message {
+          font-size: 10px;
+        }
+        .user-info {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .top-nav {
+    padding: 18px 2%;
+    justify-content: space-between;
+
+    .nav-link-container {
+      .nav-icon {
+        display: none;
+      }
+
+      .nav-list {
+        display: none;
+        height: 0;
+
+        a {
+          &:hover {
+            background-color: #00000000;
+          }
+        }
+
+        &.expand {
+          display: flex;
+          flex-direction: column;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: calc(100vh - 76px);
+          margin-top: 76px;
+          background: linear-gradient(
+            90deg,
+            rgba(90, 90, 97, 0.34) 0%,
+            rgba(29, 30, 52, 0.34) 3%,
+            rgba(0, 0, 20, 0.34) 6%,
+            rgba(0, 0, 20, 0.34) 94%,
+            rgba(29, 30, 52, 0.34) 97%,
+            rgba(90, 90, 97, 0.34) 100%
+          );
+          backdrop-filter: blur(10px);
+        }
+      }
+    }
+
+    .nav-toggle {
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      &.close-menu {
+        .icon-bar {
+          &:is(:first-child, :last-child) {
+            position: absolute;
+            margin: 0;
+            width: 30px;
+          }
+
+          &:first-child {
+            transform: rotate(45deg);
+          }
+
+          &:nth-child(2) {
+            opacity: 0;
+          }
+
+          &:last-child {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+
+      .icon-bar {
+        display: block;
+        width: 25px;
+        height: 4px;
+        margin: 2px;
+        background-color: $primary-color;
+      }
+    }
+  }
+}
+
+@media (max-width: 585px) {
+  .login-modal {
+    .login-container {
+      width: 100%;
+      height: 100%;
+      padding: 16px;
+      .login-content {
+        .login-modal-subheading {
+          font-size: 16px;
+        }
+
+        .input-container {
+          .username-label {
+            top: 48%;
+            left: 32px;
+          }
+        }
+      }
+    }
+  }
+
+  .hero-section {
+    .top-nav {
+      .user-message {
+        display: none;
+      }
+      .nav-login-btn {
+        display: block;
+        background-color: rgb(174, 160, 127);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 1.3px;
+        padding: 8px;
+        border: none;
+        border-radius: 200px;
+      }
+    }
+
+    .hero-heading {
+      font-size: 7vmin;
+    }
+  }
+}
